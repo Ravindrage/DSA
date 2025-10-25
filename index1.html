@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DSA Flashcards – Big O, Ω, Θ</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/script.js"></script>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+    <header class="bg-gray-900 text-white shadow-md">
+  <div class="container mx-auto flex justify-between items-center p-4">
+    <!-- Logo -->
+    <a href="/" class="flex items-center space-x-2">
+      <img src="/images/logo.png" alt="DSA Logo" class="h-10 w-10 object-contain">
+      <span class="text-xl font-bold">DSA Learning</span>
+    </a>
+
+    <!-- Navigation Menu -->
+    <nav>
+      <ul class="flex space-x-6">
+        <li><a href="/" class="hover:text-yellow-400">Home</a></li>
+        <li><a href="/topics" class="hover:text-yellow-400">Topics</a></li>
+        <li><a href="/practice" class="hover:text-yellow-400">Practice</a></li>
+        <li><a href="/progress" class="hover:text-yellow-400">Progress</a></li>
+        <li><a href="/contact" class="hover:text-yellow-400">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<!-- Add this inside <header> if you want a mobile menu -->
+<div class="md:hidden flex items-center">
+  <button id="menu-btn" class="focus:outline-none">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M4 6h16M4 12h16M4 18h16" />
+    </svg>
+  </button>
+</div>
+
+  <header class="text-center py-8 bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-md">
+    <h1 class="text-3xl font-bold">📘 DSA Flashcards</h1>
+    <p class="text-lg mt-2">Big O, Big Ω, and Big Θ Notation</p>
+  </header>
+
+  <main class="max-w-6xl mx-auto p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <!-- Flashcard 1 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front bg-blue-100">
+          <h2 class="text-xl font-semibold text-blue-700">Big O Notation (O)</h2>
+        </div>
+        <div class="card-back bg-blue-600">
+          <p>Represents the <b>upper bound</b> — the <b>worst-case</b> runtime of an algorithm.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Flashcard 2 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front bg-green-100">
+          <h2 class="text-xl font-semibold text-green-700">Big Omega (Ω)</h2>
+        </div>
+        <div class="card-back bg-green-600">
+          <p>Describes the <b>lower bound</b> — the <b>best-case</b> runtime of an algorithm.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Flashcard 3 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front bg-purple-100">
+          <h2 class="text-xl font-semibold text-purple-700">Big Theta (Θ)</h2>
+        </div>
+        <div class="card-back bg-purple-600">
+          <p>Defines a <b>tight bound</b> — both upper and lower limits of runtime growth.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Flashcard 4 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front bg-yellow-100">
+          <h2 class="text-xl font-semibold text-yellow-700">O(n²) Example</h2>
+        </div>
+        <div class="card-back bg-yellow-600">
+          <p>Runtime grows <b>proportionally to n²</b> — e.g., bubble sort or insertion sort (worst case).</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Flashcard 5 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front bg-red-100">
+          <h2 class="text-xl font-semibold text-red-700">Ω(n) Example</h2>
+        </div>
+        <div class="card-back bg-red-600">
+          <p>Algorithm takes at least <b>linear time</b> in the best case.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Flashcard 6 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front bg-pink-100">
+          <h2 class="text-xl font-semibold text-pink-700">Θ(n log n)</h2>
+        </div>
+        <div class="card-back bg-pink-600">
+          <p>Runtime grows as <b>n log n</b> in both best and worst cases (e.g., Merge Sort).</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Flashcard 7 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front bg-indigo-100">
+          <h2 class="text-xl font-semibold text-indigo-700">Relation O, Ω, Θ</h2>
+        </div>
+        <div class="card-back bg-indigo-600">
+          <p><b>O</b> → Upper bound<br><b>Ω</b> → Lower bound<br><b>Θ</b> → Tight bound</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Flashcard 8 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front bg-teal-100">
+          <h2 class="text-xl font-semibold text-teal-700">Constant Time</h2>
+        </div>
+        <div class="card-back bg-teal-600">
+          <p><b>O(1)</b> means runtime is constant, independent of input size.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Flashcard 9 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front bg-orange-100">
+          <h2 class="text-xl font-semibold text-orange-700">Why Use Big O?</h2>
+        </div>
+        <div class="card-back bg-orange-600">
+          <p>It expresses <b>worst-case efficiency</b>, ensuring reliability under all conditions.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Flashcard 10 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front bg-sky-100">
+          <h2 class="text-xl font-semibold text-sky-700">Proving Θ(f(n))</h2>
+        </div>
+        <div class="card-back bg-sky-600">
+          <p>Find constants <b>c₁, c₂, n₀</b> where:<br>c₁·g(n) ≤ f(n) ≤ c₂·g(n) for n ≥ n₀.</p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="text-center py-6 text-gray-600 border-t mt-10">
+    © 2025 DSA Flashcards by Ravindra Gehlot
+  </footer>
+</body>
+</html>
